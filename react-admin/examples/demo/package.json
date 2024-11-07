@@ -26,6 +26,7 @@
         "ra-input-rich-text": "^5.0.0",
         "ra-language-english": "^5.0.0",
         "ra-language-french": "^5.0.0",
+        "ra-language-vietnamese": "^3.0.1",
         "react": "^18.3.1",
         "react-admin": "^5.0.0",
         "react-dom": "^18.3.1",

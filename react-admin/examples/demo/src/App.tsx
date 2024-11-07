@@ -27,6 +27,8 @@ const i18nProvider = polyglotI18nProvider(
     locale => {
         if (locale === 'fr') {
             return import('./i18n/fr').then(messages => messages.default);
+        } else if (locale === 'vi') {
+            return import('./i18n/vi').then(message => message.default);
         }
 
         // Always fallback on english
@@ -36,6 +38,7 @@ const i18nProvider = polyglotI18nProvider(
     [
         { locale: 'en', name: 'English' },
         { locale: 'fr', name: 'Français' },
+        { locale: 'vi', name: 'VietNamese' },
     ]
 );
 
