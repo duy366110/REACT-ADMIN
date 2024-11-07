@@ -3,7 +3,12 @@
     "composite": true,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+        "react-admin": ["./node_modules/react-admin"],
+        "@mui/icons-material/*": ["./node_modules/@mui/icons-material/esm/*"]
+    }
   },
   "include": ["vite.config.ts"]
 }
