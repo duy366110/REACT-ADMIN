@@ -22,6 +22,7 @@ import reviews from './reviews';
 import Segments from './segments/Segments';
 import visitors from './visitors';
 import { themes, ThemeName } from './themes/themes';
+import Access from './access/Access';
 
 const i18nProvider = polyglotI18nProvider(
     locale => {
@@ -74,6 +75,9 @@ const App = () => {
             <Resource name="products" {...products} />
             <Resource name="categories" {...categories} />
             <Resource name="reviews" {...reviews} />
+            <CustomRoutes>
+                <Route path="/auth" element={<Access />} />
+            </CustomRoutes>
         </Admin>
     );
 };

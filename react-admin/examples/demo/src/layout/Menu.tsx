@@ -135,6 +135,15 @@ const Menu = ({ dense = false }: MenuProps) => {
                 leftIcon={<reviews.icon />}
                 dense={dense}
             />
+            <MenuItemLink
+                to="/auth"
+                state={{ _scrollToTop: true }}
+                primaryText={translate(`resources.access.name`, {
+                    smart_count: 2,
+                })}
+                leftIcon={<reviews.icon />}
+                dense={dense}
+            />
         </Box>
     );
 };

@@ -276,6 +276,9 @@ const customFrenchMessages: TranslationMessages = {
                 reviewer: 'Commentateur',
             },
         },
+        access: {
+            name: 'Accès',
+        },
     },
 };
 

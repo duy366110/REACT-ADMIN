@@ -253,6 +253,9 @@ const customEnglishMessages: TranslationMessages = {
                 reviewer: 'Reviewer',
             },
         },
+        access: {
+            name: 'Access',
+        },
     },
 };
 
