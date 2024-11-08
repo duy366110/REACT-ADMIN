@@ -1,0 +1,20 @@
+{
+    "name": "server",
+    "packageManager": "yarn@4.0.2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js",
+        "db": "json-server --watch db/db.json --port 5000"
+    },
+    "devDependencies": {
+        "@types/cors": "^2",
+        "nodemon": "^3.1.7"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "json-server": "0.16.3",
+        "uuid": "^11.0.2"
+    }
+}

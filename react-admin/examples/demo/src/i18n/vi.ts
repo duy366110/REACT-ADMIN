@@ -264,6 +264,9 @@ const customVietnameseMessages: TranslationMessages = {
                 reviewer: 'Người đánh giá',
             },
         },
+        access: {
+            name: 'Truy cập',
+        },
     },
 };
 

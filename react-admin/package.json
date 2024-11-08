@@ -16,6 +16,8 @@
         "run-no-code": "cd examples/no-code && yarn dev",
         "run-tutorial": "cd examples/tutorial && yarn dev",
         "run-demo": "cd examples/demo && cross-env REACT_APP_DATA_PROVIDER=rest yarn dev",
+        "run-server-db": "cd examples/server && yarn run db",
+        "run-server": "cd examples/server && yarn run dev",
         "build-demo": "cd examples/demo && cross-env REACT_APP_DATA_PROVIDER=rest yarn build",
         "run-graphql-demo": "cd examples/demo && cross-env REACT_APP_DATA_PROVIDER=graphql yarn dev",
         "run-crm": "cd examples/crm && yarn dev",
