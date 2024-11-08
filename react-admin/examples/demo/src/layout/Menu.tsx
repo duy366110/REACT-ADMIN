@@ -136,7 +136,7 @@ const Menu = ({ dense = false }: MenuProps) => {
                 dense={dense}
             />
             <MenuItemLink
-                to="/auth"
+                to="/access"
                 state={{ _scrollToTop: true }}
                 primaryText={translate(`resources.access.name`, {
                     smart_count: 2,

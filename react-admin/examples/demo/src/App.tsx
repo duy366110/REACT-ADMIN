@@ -22,7 +22,9 @@ import reviews from './reviews';
 import Segments from './segments/Segments';
 import visitors from './visitors';
 import { themes, ThemeName } from './themes/themes';
-import Auth from './access/index';
+
+import Access from './access/index';
+import { accessProvider } from './dataProvider/accessProvider';
 
 const i18nProvider = polyglotI18nProvider(
     locale => {
@@ -52,9 +54,7 @@ const App = () => {
     return (
         <Admin
             title=""
-            dataProvider={dataProviderFactory(
-                process.env.REACT_APP_DATA_PROVIDER || ''
-            )}
+            dataProvider={accessProvider}
             store={store}
             authProvider={authProvider}
             dashboard={Dashboard}
@@ -75,7 +75,7 @@ const App = () => {
             <Resource name="products" {...products} />
             <Resource name="categories" {...categories} />
             <Resource name="reviews" {...reviews} />
-            <Resource name="auth" {...Auth} />
+            <Resource name="access" {...Access} />
         </Admin>
     );
 };

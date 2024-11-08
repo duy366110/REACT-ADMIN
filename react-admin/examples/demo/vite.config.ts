@@ -13,15 +13,25 @@ const __dirname = path.dirname(__filename);
 export default defineConfig(async () => {
     const packages = fs.readdirSync(path.resolve(__dirname, '../../packages'));
     const aliases: Record<string, string> = {
-        'data-generator-retail': path.resolve(__dirname, '../data-generator/src'),
+        'data-generator-retail': path.resolve(
+            __dirname,
+            '../data-generator/src'
+        ),
     };
 
     for (const dirName of packages) {
         if (dirName === 'create-react-admin') continue;
-        
-        const packageJsonPath = path.resolve(__dirname, '../../packages', dirName, 'package.json');
+
+        const packageJsonPath = path.resolve(
+            __dirname,
+            '../../packages',
+            dirName,
+            'package.json'
+        );
         const packageJsonURL = `file://${packageJsonPath.replace(/\\/g, '/')}`;
-        const packageJson = await import(packageJsonURL, { assert: { type: 'json' } });
+        const packageJson = await import(packageJsonURL, {
+            assert: { type: 'json' },
+        });
 
         aliases[packageJson.default.name] = path.resolve(
             __dirname,
@@ -43,6 +53,13 @@ export default defineConfig(async () => {
         server: {
             port: 8000,
             open: true,
+            proxy: {
+                '/api': {
+                    target: 'http://localhost:6000', // Địa chỉ của backend (json-server)
+                    changeOrigin: true, // Thay đổi origin để tránh lỗi CORS
+                    rewrite: path => path.replace(/^\/api/, ''), // Loại bỏ '/api' khỏi URL trước khi chuyển tiếp
+                },
+            },
         },
         base: './',
         esbuild: {
