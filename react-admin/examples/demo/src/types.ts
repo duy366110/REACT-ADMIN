@@ -9,6 +9,7 @@ export type Order = DataGenerator.Order;
 export type Invoice = DataGenerator.Invoice;
 export type Review = DataGenerator.Review;
 export type BasketItem = DataGenerator.BasketItem;
+export type Access = DataGenerator.Access;
 
 declare global {
     interface Window {

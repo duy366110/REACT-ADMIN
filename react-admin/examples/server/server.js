@@ -19,6 +19,15 @@ server.use(
 );
 
 server.use((req, res, next) => {
+    if (req.method === 'GET') {
+        let { id } = req.params;
+
+        if (id) {
+            let access = router.db.get('access').find({ id }).value();
+            res.status(200).json(access);
+        }
+    }
+
     if (req.method === 'POST') {
         const body = req.body;
         if (!body.user_id) {
@@ -41,7 +50,6 @@ server.use((req, res, next) => {
             ids.forEach(id => {
                 router.db.get('access').remove({ id }).write();
             });
-            // return res.status(200).json({ message: 'Deleted selected items' });
         } else {
             return res.status(400).json({ error: 'IDs must be an array' });
         }

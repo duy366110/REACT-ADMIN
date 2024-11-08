@@ -1,5 +1,33 @@
 {
-  "access": [],
+  "access": [
+    {
+      "username": "ttt",
+      "full_name": "uuuu",
+      "email": "ttt@gmail.com",
+      "phone_number": "+840352438729",
+      "role": "admin",
+      "group": [
+        "admin",
+        "user",
+        "guest"
+      ],
+      "tenant": "001",
+      "status": "active",
+      "mfa_status": "enabled",
+      "permissions": [
+        "created",
+        "updated"
+      ],
+      "account_lockout_status": "enabled",
+      "user_id": "db13bb0b-7528-44b0-881c-477063ae4f56",
+      "last_login": "",
+      "password_expiration": "",
+      "last_password_change": "",
+      "creation_date": "2024-11-08T14:45:49.292Z",
+      "custom_attributes": {},
+      "id": 1
+    }
+  ],
   "orders": [],
   "invoices": [],
   "posters": [],

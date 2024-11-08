@@ -1,4 +1,4 @@
-import { Create, SimpleForm, required, regex } from 'react-admin';
+import { Create, SimpleForm, required, regex, Edit } from 'react-admin';
 import Input from '../../ui/input/Input';
 import Select from '../../ui/select/Select';
 import Switch from '../../ui/switch/switch';
@@ -49,7 +49,7 @@ const tenants = [
 const AccessFromEdit = (props: any) => {
     return (
         <div>
-            <Create {...props}>
+            <Edit {...props}>
                 <SimpleForm>
                     <Input
                         source="username"
@@ -124,7 +124,7 @@ const AccessFromEdit = (props: any) => {
                         type="single"
                     />
                 </SimpleForm>
-            </Create>
+            </Edit>
         </div>
     );
 };
