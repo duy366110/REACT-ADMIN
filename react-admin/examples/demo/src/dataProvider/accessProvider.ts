@@ -45,4 +45,13 @@ export const accessProvider = {
         });
         return { data: json };
     },
+    deleteMany: (resource: any, params: any) => {
+        return fetch(`/api/${resource}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ ids: params.ids }),
+        }).then(response => response.json());
+    },
 };

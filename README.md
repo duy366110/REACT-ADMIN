@@ -11,17 +11,12 @@
         root folder react-admi:
             yarn install
 
-    - Step 2: Start DB:
-
-        root folder react-admin:
-            yarn run run-server-db
-
-    - Step 3: Start Server:
+    - Step 2: Start Server:
 
         root folder react-admin:
             yarn run run-server
 
-    - Step 4: Start add demo:
+    - Step 3: Start add demo:
 
         root folder react-admin:
             yarn run run-demo
