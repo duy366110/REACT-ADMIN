@@ -1,5 +1,32 @@
 {
-  "access": [],
+  "access": [
+    {
+      "username": "ddd",
+      "full_name": "ddd",
+      "email": "ddd@gmail.com",
+      "phone_number": "+840352438730",
+      "role": "guest",
+      "group": [
+        "user",
+        "guest"
+      ],
+      "tenant": "004",
+      "status": "inactive",
+      "mfa_status": "enabled",
+      "permissions": [
+        "updated",
+        "deleted"
+      ],
+      "account_lockout_status": "disabled",
+      "user_id": "2829c6ba-3e81-4d1e-9957-6f38bb605fd8",
+      "last_login": "",
+      "password_expiration": "",
+      "last_password_change": "",
+      "creation_date": "2024-11-09T04:43:23.789Z",
+      "custom_attributes": {},
+      "id": 1
+    }
+  ],
   "orders": [],
   "invoices": [],
   "posters": [],

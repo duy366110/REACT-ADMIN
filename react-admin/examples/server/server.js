@@ -19,6 +19,15 @@ server.use(
 );
 
 server.use((req, res, next) => {
+    if (req.method === 'GET') {
+        let { id } = req.params;
+
+        if (id) {
+            let access = router.db.get('access').find({ id }).value();
+            res.status(200).json(access);
+        }
+    }
+
     if (req.method === 'POST') {
         const body = req.body;
         if (!body.user_id) {
@@ -41,12 +50,26 @@ server.use((req, res, next) => {
             ids.forEach(id => {
                 router.db.get('access').remove({ id }).write();
             });
-            // return res.status(200).json({ message: 'Deleted selected items' });
         } else {
             return res.status(400).json({ error: 'IDs must be an array' });
         }
     }
 
+    next();
+});
+
+server.put('/access/:id', (req, res, next) => {
+    const { id } = req.params;
+    const updates = req.body;
+
+    if (!id) {
+        return res.status(400).json({ error: 'ID is required' });
+    }
+
+    const access = router.db.get('access').find({ id }).assign(updates).write();
+    if (!access) {
+        return res.status(404).json({ error: 'Access not found' });
+    }
     next();
 });
 

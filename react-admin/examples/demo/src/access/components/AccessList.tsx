@@ -5,6 +5,7 @@ import {
     EmailField,
     BulkDeleteButton,
 } from 'react-admin';
+import CustomLinkField from '../../ui/customLinkField/CustomLinkField';
 
 const AccessList = (props: any) => {
     return (
@@ -15,7 +16,11 @@ const AccessList = (props: any) => {
                     bulkActionButtons={<BulkDeleteButton />}
                 >
                     <TextField source="id" label="ID" />
-                    <TextField source="username" label="Username" />
+                    <CustomLinkField
+                        source="username"
+                        label="Username"
+                        type="Access"
+                    />
                     <EmailField source="email" label="Email" />
                     <TextField source="role" label="Role" />
                 </Datagrid>
