@@ -54,6 +54,10 @@ const App = () => {
     return (
         <Admin
             title=""
+            // dataProvider={dataProviderFactory(
+            //     process.env.REACT_APP_DATA_PROVIDER || ''
+            // )}
+
             dataProvider={accessProvider}
             store={store}
             authProvider={authProvider}

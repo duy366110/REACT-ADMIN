@@ -1,23 +1,26 @@
 import { SelectInput, SelectArrayInput } from 'react-admin';
+import { Box } from '@mui/material';
 
 const Select = (props: any) => {
     return (
-        <div>
+        <Box sx={{ width: '100%' }}>
             {props.type === 'multiple' && (
                 <SelectArrayInput
                     source={props.source}
                     label={props.label}
                     choices={props.choices}
+                    validate={props.validate}
                 />
             )}
             {props.type === 'single' && (
                 <SelectInput
                     source={props.source}
                     label={props.label}
-                    choices={props.choices} // Các giá trị trong dropdown
+                    choices={props.choices}
+                    validate={props.validate}
                 />
             )}
-        </div>
+        </Box>
     );
 };
 
