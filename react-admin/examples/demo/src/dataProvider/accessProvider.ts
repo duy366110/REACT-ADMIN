@@ -33,6 +33,9 @@ export const accessProvider = {
         const url = `${apiUrl}/${resource}/${id}`;
         const { json } = await httpClient(url, {
             method: 'PUT',
+            headers: new Headers({
+                'Content-Type': 'application/json',
+            }),
             body: JSON.stringify(data),
         });
         return { data: json };

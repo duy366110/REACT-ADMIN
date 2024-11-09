@@ -1,29 +1,28 @@
 {
   "access": [
     {
-      "username": "ttt",
-      "full_name": "uuuu",
-      "email": "ttt@gmail.com",
-      "phone_number": "+840352438729",
-      "role": "admin",
+      "username": "ddd",
+      "full_name": "ddd",
+      "email": "ddd@gmail.com",
+      "phone_number": "+840352438730",
+      "role": "guest",
       "group": [
-        "admin",
         "user",
         "guest"
       ],
-      "tenant": "001",
-      "status": "active",
+      "tenant": "004",
+      "status": "inactive",
       "mfa_status": "enabled",
       "permissions": [
-        "created",
-        "updated"
+        "updated",
+        "deleted"
       ],
-      "account_lockout_status": "enabled",
-      "user_id": "db13bb0b-7528-44b0-881c-477063ae4f56",
+      "account_lockout_status": "disabled",
+      "user_id": "2829c6ba-3e81-4d1e-9957-6f38bb605fd8",
       "last_login": "",
       "password_expiration": "",
       "last_password_change": "",
-      "creation_date": "2024-11-08T14:45:49.292Z",
+      "creation_date": "2024-11-09T04:43:23.789Z",
       "custom_attributes": {},
       "id": 1
     }

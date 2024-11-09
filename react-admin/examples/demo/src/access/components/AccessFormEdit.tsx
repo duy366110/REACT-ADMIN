@@ -49,7 +49,16 @@ const tenants = [
 const AccessFromEdit = (props: any) => {
     return (
         <div>
-            <Edit {...props}>
+            <Edit
+                {...props}
+                redirect="list"
+                mutationMode="pessimistic"
+                mutationOptions={{
+                    onFailure: (error: any) => {
+                        console.error('Update failed:', error);
+                    },
+                }}
+            >
                 <SimpleForm>
                     <Input
                         source="username"

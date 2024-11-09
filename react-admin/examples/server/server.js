@@ -58,6 +58,21 @@ server.use((req, res, next) => {
     next();
 });
 
+server.put('/access/:id', (req, res, next) => {
+    const { id } = req.params;
+    const updates = req.body;
+
+    if (!id) {
+        return res.status(400).json({ error: 'ID is required' });
+    }
+
+    const access = router.db.get('access').find({ id }).assign(updates).write();
+    if (!access) {
+        return res.status(404).json({ error: 'Access not found' });
+    }
+    next();
+});
+
 server.use(router);
 server.listen(6000, () => {
     console.log('JSON Server is running');
