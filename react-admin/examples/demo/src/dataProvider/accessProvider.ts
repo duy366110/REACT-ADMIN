@@ -1,6 +1,6 @@
 import { fetchUtils } from 'react-admin';
 
-const apiUrl = '/api'; // URL của json-server
+const apiUrl = '/api';
 const httpClient = fetchUtils.fetchJson;
 
 export const accessProvider = {
